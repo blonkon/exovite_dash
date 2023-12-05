@@ -1,18 +1,15 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { getAuth, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire/compat';
+import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None 
+  selector: 'app-log',
+  templateUrl: './log.component.html',
+  styleUrls: ['./log.component.scss']
 })
-export class AppComponent {
-constructor(private router:Router,private Auth : AngularFireAuth ){}
+export class LogComponent {
+  constructor(private router:Router,private Auth : AngularFireAuth ){}
   title = 'exovite';
   getEmail!:string;
   getPassword!:string;
@@ -29,4 +26,4 @@ constructor(private router:Router,private Auth : AngularFireAuth ){}
     this.invalid="Login incorrect";
   });
   } 
-  }
+}

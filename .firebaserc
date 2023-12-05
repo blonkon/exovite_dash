@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "exovite-e1992": {
+      "hosting": {
+        "exovite": [
+          "exovite-e1992"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "exovite-e1992"
+  }
+}
